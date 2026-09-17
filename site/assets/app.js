@@ -367,7 +367,7 @@ const I18N = {
   zh: {
     "Chart notes": "图表说明",
     "Chart legend": "图例",
-    "Shown / corpus": "显示数／目录总数",
+    "Shown / everything collected": "显示数／收集总数",
     "source document": "份来源文档",
     "Document publication date": "文档发布日期",
     "Reporting organization color key": "报告机构颜色图例",
@@ -379,10 +379,10 @@ const I18N = {
     "No source documents recorded": "尚未记录来源文档",
     "Open the source-document list below to trace each count to its citations.": "打开下方来源文档列表，可核对每个计数对应的引用。",
     "No source documents recorded yet.": "尚未记录来源文档。",
-    "Each linked benchmark counts once for this document. Open its detail to inspect scores, protocols and citations.": "每条 benchmark 记录在这份文档中只计一次。打开详情可查看成绩、测试条件和引用。",
-    "Scores and citations from model reports. Each score keeps its document, test version, protocol and publication date.": "这些成绩和引用来自模型报告。每条成绩都保留来源文档、测试版本、测试条件和发布日期。",
+    "Each linked benchmark counts once for this document. Open its detail to inspect scores, run conditions and citations.": "每条 benchmark 记录在这份文档中只计一次。打开详情可查看成绩、测试条件和引用。",
+    "Scores and citations from model reports. Each score keeps its document, test version, run conditions and publication date.": "这些成绩和引用来自模型报告。每条成绩都保留来源文档、测试版本、测试条件和发布日期。",
     "No numeric scores recorded for this benchmark.": "这条 benchmark 尚未记录数值成绩。",
-    "Benchmark Frontier: {n} individual benchmarks from all sources. Dated benchmarks run left to right from 2024. Undated benchmarks remain visible by score. Gold rings mark the measured Pareto frontier.": "Benchmark 前沿：全部来源的 {n} 个独立标记。日期从 2024 年起向右排列，日期未知的仍按分数显示。金色环标出有测量依据的 Pareto 前沿。",
+    "Most tested hard benchmarks: {n} individual benchmarks from all sources. Dated benchmarks run left to right from 2024. Undated benchmarks remain visible by score. Gold rings mark benchmarks nothing else beats on both reported score and number of models tested.": "测试最多的难题 benchmark：全部来源共 {n} 个独立 benchmark。日期从 2024 年起向右排列，日期未知的仍按分数显示。金色圆环标出在报告分数和测试模型数上都不被超越的 benchmark。",
     "{unscored} without scores excluded · {older} before 2024 · {hidden} hidden by score": "未报告成绩的 {unscored} 个已排除 · {older} 个早于 2024 年 · 分数筛选隐藏 {hidden} 个",
     "Saturation": "饱和度",
     "Searching all benchmarks (filters paused)": "搜索全部 benchmark（暂不筛选）",
@@ -393,7 +393,7 @@ const I18N = {
     "Date unknown · {n} benchmarks": "日期未知 · {n} 个 benchmark",
     "Full benchmark catalog could not be loaded.": "未能加载完整的 benchmark 目录。",
     "Loading all benchmark sources…": "正在加载全部 benchmark 来源…",
-    "Pareto: {p} of {n} benchmarks with verified score scales and a recorded height count. Unverified scales do not enter the frontier.": "{n} 个 benchmark 的分数刻度已核实且柱高有记录，其中 {p} 个位于 Pareto 前沿。刻度未核实的成绩不参与前沿计算。",
+    "Gold rings: {p} of {n} benchmarks with verified score scales and a recorded height count. Benchmarks with unverified scales never get a ring.": "金色圆环：分数刻度已核实且数量有记录的 {n} 个 benchmark 中，有 {p} 个获得圆环；刻度未核实的没有圆环。",
     "{visible} visible · {scored} with scores · {unknown} without scores · {hidden} hidden by filters": "显示 {visible} 个 · {scored} 个有成绩 · {unknown} 个未报告成绩 · 筛选隐藏 {hidden} 个",
     "{n} benchmarks · {s} sources": "{n} 个 benchmark · {s} 个来源",
     "Not verified for comparison": "尚未确认可用于比较",
@@ -413,13 +413,12 @@ const I18N = {
     "Adoption not recorded": "采用量未记录",
     "Hollow marks: count or score scale unverified": "空心点：数量未知或分数刻度未核实",
     "Count or score scale unverified": "数量或分数刻度未核实",
-    "{visible} of {n} benchmarks shown · {s} sources in corpus": "显示 {visible} / {n} 个 benchmark · 全部数据来自 {s} 个来源",
+    "{visible} of {n} benchmarks shown · from {s} sources": "显示 {visible} / {n} 个 benchmark · 全部数据来自 {s} 个来源",
     "Browse all benchmarks": "查找全部 benchmark",
-    "Benchmark Frontier": "Benchmark 前沿",
-    "Benchmark Frontier chart": "Benchmark 前沿图",
+    "Most tested hard benchmarks": "测试最多的难题 benchmark",
+    "Most tested hard benchmarks chart": "测试最多的难题 benchmark 图",
     "Which difficult benchmarks have been tested most": "哪些难题，已有更多模型参加测试",
     "Show benchmarks with highest reported score below:": "只看最高报告分数低于此值的 benchmark：",
-    "How to read the frontier": "怎样读这张前沿图",
     "skyline.reading": "每个点代表一条 benchmark 记录。默认高度表示有数值成绩的独立模型数，按来源的模型 ID 去重，保留单独评测的配置；重复成绩不增加模型数。“来源文档数”统计引用的独立报告或登记页面，所有来源按同一规则计数。悬停可查看两种数量。",
     "skyline.pareto": "侧视图把报告分数和当前选择的数量投影到左侧墙面，省略时间。金色阶梯线只比较分数刻度已核实的 benchmark。在日期不早于 2024 年的范围内，如果没有另一个符合计算条件的 benchmark 标准化分数不高于它、所选数量不低于它，且至少一项严格占优，它就位于 Pareto 前沿。日期只用于筛选范围，不参与支配关系计算；分数和数量也不相乘。拖动分数上限，不会把原本被支配的点变成前沿点。",
     "skyline.scope": "柱高用 log1p(count)，刻度、悬浮说明和 Pareto 计算都用原始数量。纵轴覆盖全部 2024 年起有成绩的 benchmark，筛选时保持不变。只有明确采用百分比指标、且所选数量已记录的 benchmark 才参与 Pareto 计算；越低越好的百分比换算为 100 减去原值。空心点表示分数刻度未核实或数量未知，未知不等于零。重叠的圆点会错开，悬停或聚焦可追溯实际坐标，方向键可切换 benchmark。刻度一致不代表测试条件相同，也不能据此认定 benchmark 已被解决。",
@@ -439,16 +438,15 @@ const I18N = {
     "Public release": "公开发布",
     "Open date source ↗": "查看日期来源 ↗",
     "Source documents": "来源文档数",
-    "Hard frontier": "难题前沿",
     "Emerging": "新兴评测",
     "Saturated": "趋于饱和",
-    "Pareto frontier": "Pareto 前沿",
+    "Best trade-off": "两项俱佳",
     "Original score": "原始分数",
     "lower is better": "越低越好",
     "First observed": "首次观测",
     "Metric": "指标",
-    "Instrument": "评测版本",
-    "Protocol": "测试条件",
+    "Test version": "评测版本",
+    "Run conditions": "测试条件",
     "Score reported": "成绩报告日期",
     "Code": "代码",
     "Science": "科学",
@@ -457,7 +455,6 @@ const I18N = {
     "Model-card measurements are unavailable.": "模型卡测量数据暂时不可用。",
     "Catalog coverage unavailable.": "暂时无法读取目录覆盖范围。",
     "Checking catalog coverage…": "正在读取目录覆盖范围…",
-    "3D skyline of {n} benchmarks. Time runs left to right from 2022. Earlier dates have a separate segment. Stems show recorded model-card adoption; hollow marks show unknown adoption or score scales. Gold rings mark the measured Pareto frontier.": "{n} 个 benchmark 的三维天际线。时间从 2022 年起向右延伸，更早的日期单独保留。细柱表示已记录的模型卡采用量；空心点表示采用量或分数刻度未知。金色圆环标出有测量依据的 Pareto 前沿。",
     // --- Brackets and chrome -------------------------------------------------
     "Skip to content": "跳到主要内容",
     "Benchmark Radar": "Benchmark 雷达日报",
@@ -1024,7 +1021,7 @@ const I18N = {
     "Click to pin record details": "点击固定记录详情",
     Comments: "评论",
     "Discovery sources": "发现来源",
-    "Each linked benchmark counts once for this document. Open its detail to inspect scores, protocols and citations.":
+    "Each linked benchmark counts once for this document. Open its detail to inspect scores, run conditions and citations.":
       "每个关联 benchmark 在这份文档中只计一次。打开详情可查看分数、评测条件和引用来源。",
     "Every record matching at least one taxonomy category is retained. A score of":
       "只要匹配至少一个分类类别的记录都会被保留。达到分数",
@@ -1667,9 +1664,9 @@ const VIEW_SEO = {
     canonical: "/",
   },
   leaderboard: {
-    title: "AI benchmark frontier and rankings | Benchmark Radar",
+    title: "Most tested hard AI benchmarks and rankings | Benchmark Radar",
     description:
-      "Explore Benchmark Frontier by highest reported score, and compare benchmarks by recorded scores and source documents across the catalog.",
+      "Explore the most tested hard benchmarks by highest reported score, and compare benchmarks by recorded scores and source documents across all sources.",
     canonical: "/leaderboard/",
   },
   saturation: {
@@ -1681,13 +1678,13 @@ const VIEW_SEO = {
   trends: {
     title: "AI benchmark discovery trends over time | Benchmark Radar",
     description:
-      "Daily volume of new AI benchmark evidence by category, source, and event, with a ledger of every collection day in the corpus.",
+      "Daily volume of new AI benchmark evidence by category, source, and event, with a ledger of every collection day.",
     canonical: "/trends/",
   },
   map: {
     title: "Explore connections across AI benchmarks | Benchmark Radar",
     description:
-      "See how benchmarks, datasets, evaluations, sources, and organizations connect across the Benchmark Radar corpus, and jump from any topic into the filtered daily list.",
+      "See how benchmarks, datasets, evaluations, sources, and organizations connect across Benchmark Radar, and jump from any topic into the filtered daily list.",
     canonical: "/explore/",
   },
 };
@@ -4889,7 +4886,7 @@ function skylineChart(model, cutoff) {
   const svg = svgElement("svg", {
     viewBox: `0 0 ${width} ${height}`, role: "group",
     class: hasUndatedScores ? "skyline-has-undated" : "",
-    "aria-label": t("Benchmark Frontier: {n} individual benchmarks from all sources. Dated benchmarks run left to right from 2024. Undated benchmarks remain visible by score. Gold rings mark the measured Pareto frontier.", { n: model.visible.length }),
+      "aria-label": t("Most tested hard benchmarks: {n} individual benchmarks from all sources. Dated benchmarks run left to right from 2024. Undated benchmarks remain visible by score. Gold rings mark benchmarks nothing else beats on both reported score and number of models tested.", { n: model.visible.length }),
   });
   svg.append(svgElement("polygon", {
     class: "skyline-floor", points: points([project(0, 0), project(1, 0), project(1, 100), project(0, 100)]),
@@ -5011,7 +5008,7 @@ function skylineChart(model, cutoff) {
       "data-model-count": row.modelCount === null ? "unknown" : row.modelCount,
       "data-height-count": measured ? row.heightCount : "unknown",
       "data-benchmark-date": row.date, "data-date-basis": row.dateBasis,
-      "aria-label": `${row.name}. ${scoreLabel}: ${row.plotScore.toLocaleString("en", { maximumFractionDigits: 2 })}. ${t(model.heightLabel)}: ${measured ? row.heightCount.toLocaleString() : t("Not recorded")}. ${t(benchmarkDateLabel(row))}: ${row.date}. ${row.pareto ? t("Pareto frontier") : ""}`,
+      "aria-label": `${row.name}. ${scoreLabel}: ${row.plotScore.toLocaleString("en", { maximumFractionDigits: 2 })}. ${t(model.heightLabel)}: ${measured ? row.heightCount.toLocaleString() : t("Not recorded")}. ${t(benchmarkDateLabel(row))}: ${row.date}. ${row.pareto ? t("Best trade-off") : ""}`,
     });
     const dateFoot = project(x, 0);
     group.append(line(tip, foot, "skyline-date-guide"), line(foot, dateFoot, "skyline-date-guide"),
@@ -5033,7 +5030,7 @@ function skylineChart(model, cutoff) {
     if (row.pareto) labelLayer.append(leader, name);
     else group.append(name);
     makeFrontierPointInteractive(group, {
-      kind: row.pareto ? t("Pareto frontier") : scoreSourceLabel(row.source), title: row.name,
+      kind: row.pareto ? t("Best trade-off") : scoreSourceLabel(row.source), title: row.name,
       rows: [
         { label: scoreLabel, value: `${row.plotScore.toLocaleString("en", { maximumFractionDigits: 2 })}${row.score === null ? "" : " / 100"}` },
         ...(row.score === null ? [
@@ -5046,8 +5043,8 @@ function skylineChart(model, cutoff) {
         { label: t("Domain"), value: t(row.domain) },
         ...(comparable ? [
           { label: t("Metric"), value: row.metric || t("Unknown") },
-          { label: t("Instrument"), value: row.instrument || t("Unknown") },
-          { label: t("Protocol"), value: row.protocol || t("Unknown") },
+          { label: t("Test version"), value: row.instrument || t("Unknown") },
+          { label: t("Run conditions"), value: row.protocol || t("Unknown") },
           { label: t("Score reported"), value: row.reportedAt ? formatDate(row.reportedAt) : t("Unknown") },
         ] : []),
         { label: t("Source"), value: row.sourceId || scoreSourceLabel(row.source) },
@@ -5163,7 +5160,7 @@ function skylineLegend() {
     ...Object.keys(SKYLINE_DOMAINS).map((domain) => element("li", {
       className: `skyline-domain-${domain.toLowerCase()}`,
     }, [element("span", { className: "skyline-swatch", attrs: { "aria-hidden": "true" } }), element("span", { text: t(domain) })])),
-    element("li", {}, [element("span", { className: "skyline-swatch skyline-swatch-pareto", attrs: { "aria-hidden": "true" } }), element("span", { text: t("Pareto frontier") })]),
+    element("li", {}, [element("span", { className: "skyline-swatch skyline-swatch-pareto", attrs: { "aria-hidden": "true" } }), element("span", { text: t("Best trade-off") })]),
     element("li", {}, [element("span", { className: "skyline-swatch skyline-swatch-unknown", attrs: { "aria-hidden": "true" } }), element("span", { text: t("Count or score scale unverified") })]),
     element("li", {}, [element("span", { className: "skyline-swatch skyline-swatch-proxy", attrs: { "aria-hidden": "true" } }), element("span", { text: t("First score date uses model release") })]),
   ]);
@@ -5223,14 +5220,14 @@ function renderBenchmarkSkyline(cutoff = state.lscore) {
   contents.push(frontierTooltip());
   replaceChildren(host, contents);
   replaceChildren(byId("benchmark-skyline-legend"), [skylineLegend()]);
-  byId("benchmark-skyline-sources").textContent = `${t("Shown / corpus")}: ${sourceCounts.join(" · ")}`;
+  byId("benchmark-skyline-sources").textContent = `${t("Shown / everything collected")}: ${sourceCounts.join(" · ")}`;
   byId("benchmark-skyline-coverage").textContent = `${heightCoverage} · ${heightBasis}`;
-  byId("benchmark-skyline-pareto").textContent = t("Pareto: {p} of {n} benchmarks with verified score scales and a recorded height count. Unverified scales do not enter the frontier.", {
+  byId("benchmark-skyline-pareto").textContent = t("Gold rings: {p} of {n} benchmarks with verified score scales and a recorded height count. Benchmarks with unverified scales never get a ring.", {
     p: model.comparable.filter((row) => row.pareto).length, n: model.comparable.length,
   });
   enableFrontierTouchTargets(svg);
   enableSkylineKeyboard(svg);
-  byId("benchmark-skyline-count").textContent = t("{visible} of {n} benchmarks shown · {s} sources in corpus", {
+  byId("benchmark-skyline-count").textContent = t("{visible} of {n} benchmarks shown · from {s} sources", {
     visible: model.visible.length.toLocaleString(), n: model.population.toLocaleString(), s: model.sources,
   });
   byId("benchmark-skyline-note").textContent = t("{unscored} without scores excluded · {older} before 2024 · {hidden} hidden by score", {
@@ -5295,7 +5292,7 @@ function loadBenchmarkShard(slug) {
 const CATALOG_SOURCE_META = {
   model_reports: {
     name: "Model reports",
-    noteKey: "Scores and citations from model reports. Each score keeps its document, test version, protocol and publication date.",
+    noteKey: "Scores and citations from model reports. Each score keeps its document, test version, run conditions and publication date.",
     emptyKey: "No numeric scores recorded for this benchmark.",
   },
   llm_stats: {
@@ -5306,7 +5303,7 @@ const CATALOG_SOURCE_META = {
       // the measurement -- the date recorded is the model's own release -- and
       // that is the distinction worth stating. Higher values are better within
       // each LLM Stats benchmark; the x axis remains the model release date.
-      "Self-reported scores collected by LLM Stats. Higher values are better. No evaluation protocol is recorded, and the only date is each model's own release, not when the score was measured. The line links successive reported highs by model release; it is not an evaluation-time trend.",
+      "Self-reported scores collected by LLM Stats. Higher values are better. No run conditions are recorded, and the only date is each model's own release, not when the score was measured. The line links successive reported highs by model release; it is not an evaluation-time trend.",
     emptyKey: "LLM Stats recorded no scores for this benchmark.",
   },
   opencompass_hub: {
@@ -5818,8 +5815,8 @@ function catalogScoreChart(source, payload) {
         { label: t("Organization"), value: row.organization || t("not recorded") },
         { label: t("Model"), value: row.model_name || t("not recorded") },
         { label: t("Score as reported"), value: String(row.raw_value ?? row.value) },
-        ...(row.instrument ? [{ label: t("Instrument"), value: row.instrument }] : []),
-        ...(row.protocol ? [{ label: t("Protocol"), value: row.protocol }] : []),
+        ...(row.instrument ? [{ label: t("Test version"), value: row.instrument }] : []),
+        ...(row.protocol ? [{ label: t("Run conditions"), value: row.protocol }] : []),
         ...(row.reported_date
           ? [
               {
@@ -8011,7 +8008,7 @@ function modelCardRow(card) {
       element("h3", { text: t("Benchmarks this document reports") }),
       element("p", {
         className: "section-note",
-        text: t("Each linked benchmark counts once for this document. Open its detail to inspect scores, protocols and citations."),
+        text: t("Each linked benchmark counts once for this document. Open its detail to inspect scores, run conditions and citations."),
       }),
       ...groups,
       element("a", {

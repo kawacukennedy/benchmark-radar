@@ -521,11 +521,11 @@ def test_every_crawled_score_has_the_curated_charts_pinned_tooltip():
     assert 'role: "button"' in chart
     assert '"data-frontier-point": ""' in chart
     assert "enableFrontierTouchTargets(svg)" in chart
-    # Only fields a crawled row actually carries -- no Instrument, Protocol,
-    # Date or Read-from row, which do not exist in this source and would print
-    # as "not recorded" filler beside the curated card's real ones.
-    assert '...(row.instrument ? [{ label: t("Instrument")' in chart
-    assert '...(row.protocol ? [{ label: t("Protocol")' in chart
+    # Only fields a crawled row actually carries -- no Test version, Run
+    # conditions, Date or Read-from row, which do not exist in this source and
+    # would print as "not recorded" filler beside the curated card's real ones.
+    assert '...(row.instrument ? [{ label: t("Test version")' in chart
+    assert '...(row.protocol ? [{ label: t("Run conditions")' in chart
     assert 't("Date")' not in chart
 
     table_fn = script.split("function catalogSourceTable(source, payload)", 1)[1].split(
@@ -662,7 +662,7 @@ def test_benchmark_skyline_leads_the_ranked_list_and_states_its_coverage():
     # the mount is a contract, not styling.
     assert 'class="frontier-chart skyline-chart" id="benchmark-skyline-chart"' in html
     assert html.index('id="benchmark-skyline"') < html.index('id="score-ranking-list"')
-    assert 'data-i18n="Benchmark Frontier"' in html
+    assert 'data-i18n="Most tested hard benchmarks"' in html
     script = source("site/assets/app.js")
     # principle.md: a count in a footnote cannot replace the missing records.
     # Every source participates; incomplete records have inspectable marks.

@@ -113,7 +113,7 @@ _ELSEWHERE: tuple[tuple[str, str, str], ...] = (
 # links to the surfaces a first-time visitor would otherwise have to find.
 _INSIDE: tuple[tuple[str, str], ...] = (
     ("/benchmarks/", "Browse every benchmark in the catalog, one page each"),
-    ("/leaderboard/", "Compare reported scores across the benchmark frontier"),
+    ("/leaderboard/", "Compare reported scores across the most tested hard benchmarks"),
     ("/saturation/", "Watch scores on a benchmark climb toward saturation"),
     ("/blog/", "Read the daily brief: what appeared today and what it means"),
     ("/cli/", "Query the whole catalog offline from the command line"),
