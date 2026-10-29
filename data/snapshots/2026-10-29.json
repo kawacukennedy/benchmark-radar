@@ -78188,5 +78188,163 @@
     "taxonomy_version": "sha256:5ee3bd8146ce",
     "watchlisted": 0
   },
+  "share": {
+    "basis": "briefing",
+    "cards": [
+      {
+        "affiliations": [
+          "behavior-spatial-benchmark"
+        ],
+        "authors": [],
+        "blurb": "The newly released BEHAVIOR-Spatial benchmark tests whether spatial answers from vision-language models—systems that interpret images and text—carry over to vision-language-action behavior in simulated robotics.",
+        "categories": [
+          "benchmark",
+          "evaluation",
+          "dataset"
+        ],
+        "published_at": "2026-10-28T21:10:48+00:00",
+        "source": "Hugging Face",
+        "title": "behavior-spatial-benchmark/BEHAVIOR-Spatial",
+        "url": "https://huggingface.co/datasets/behavior-spatial-benchmark/BEHAVIOR-Spatial"
+      },
+      {
+        "affiliations": [],
+        "authors": [
+          "Daniel Rosehill"
+        ],
+        "blurb": "The new Tech Graphics Benchmark publishes its prompts, generated images and manifests, and raw human ratings as separate linked datasets.",
+        "categories": [
+          "benchmark",
+          "evaluation",
+          "dataset"
+        ],
+        "published_at": "2026-10-28T16:37:58+00:00",
+        "source": "Hugging Face",
+        "title": "danielrosehill/Tech-Graphics-Benchmark-Ratings",
+        "url": "https://huggingface.co/datasets/danielrosehill/Tech-Graphics-Benchmark-Ratings"
+      },
+      {
+        "affiliations": [
+          "University of Massachusetts Lowell",
+          "UMass Amherst",
+          "UMass Lowell"
+        ],
+        "authors": [
+          "Won Seok Jang",
+          "Zonghai Yao",
+          "Hong Yu"
+        ],
+        "blurb": "The newly released MIMIC-IV-Ext-DischargeBench provides 320 curated hospitalization cases for pre-deployment evaluation of large language model discharge educators through patient simulation.",
+        "categories": [
+          "evaluation",
+          "dataset"
+        ],
+        "published_at": "2026-10-29T14:30:02+00:00",
+        "source": "DataCite",
+        "title": "MIMIC-IV-Ext-DischargeBench: Dataset for Pre-Deployment Evaluation of LLM Discharge Educators through Patient Simulation",
+        "url": "https://doi.org/10.13026/0tf4-ny14"
+      },
+      {
+        "affiliations": [],
+        "authors": [
+          "nikki / ANTIMEME"
+        ],
+        "blurb": "The new CLAP audio-text retrieval benchmark pins its inputs and protocol, publishes per-query results, and uses paired confidence intervals when comparing fused and unfused checkpoints.",
+        "categories": [
+          "benchmark",
+          "dataset"
+        ],
+        "published_at": "2026-10-28T19:55:54+00:00",
+        "source": "Hugging Face",
+        "title": "b4ph/clap-retrieval-benchmark",
+        "url": "https://huggingface.co/datasets/b4ph/clap-retrieval-benchmark"
+      },
+      {
+        "affiliations": [
+          "Obuda University",
+          "HUN-REN Centre for Agricultural Research"
+        ],
+        "authors": [
+          "Patrik P. Süli",
+          "György Eigner",
+          "Roland Hollós"
+        ],
+        "blurb": "The new benchgap reproduction package freezes an October 8 snapshot of a benchmark service that otherwise refreshes daily.",
+        "categories": [
+          "benchmark",
+          "evaluation"
+        ],
+        "published_at": "2026-10-29T12:39:07+00:00",
+        "source": "DataCite",
+        "title": "benchgap: LLM benchmark score snapshot of 8 October 2026 and reproduction package for \"Mind the Gap\"",
+        "url": "https://doi.org/10.5281/zenodo.23570459"
+      },
+      {
+        "affiliations": [],
+        "authors": [
+          "Emad Sharifi"
+        ],
+        "blurb": "The newly released dental implant benchmark groups its fixed five-fold splits by source radiograph rather than by cropped implant image.",
+        "categories": [
+          "benchmark",
+          "evaluation",
+          "dataset"
+        ],
+        "published_at": "2026-10-29T00:32:18+00:00",
+        "source": "Hugging Face",
+        "title": "emad2001/dental-implant-brand-benchmark",
+        "url": "https://huggingface.co/datasets/emad2001/dental-implant-brand-benchmark"
+      },
+      {
+        "affiliations": [
+          "LimeWire Open Research &amp; Digital Preservation"
+        ],
+        "authors": [
+          "Julian Mercer"
+        ],
+        "blurb": "The new Model Context Protocol multi-agent file-exchange benchmark records 180 workflow runs and evaluates transport latency, scoped-link handoffs, quarantine scanning, and file-reuse ratios across several agent environments.",
+        "categories": [
+          "benchmark",
+          "evaluation",
+          "agentic"
+        ],
+        "published_at": "2026-10-29T15:57:49+00:00",
+        "source": "DataCite",
+        "title": "LimeWire Open Research (DS-8): Model Context Protocol Multi-Agent File Exchange Telemetry Benchmark (N=180)",
+        "url": "https://doi.org/10.7910/dvn/vfckyt"
+      },
+      {
+        "affiliations": [
+          "University of Science and Technology of China , , ,",
+          "Huawei Technologies Co. Ltd. , , ,",
+          "University of Birmingham , , ,"
+        ],
+        "authors": [
+          "Muyu Lu",
+          "Danyang Chen",
+          "Fan Yu",
+          "Jun Jiang",
+          "Linjiang Chen"
+        ],
+        "blurb": "The newly released AutoResearch-MLIP protocol evaluates an autonomous agent over 40 generations of scientific-model development.",
+        "categories": [
+          "benchmark",
+          "evaluation",
+          "agentic"
+        ],
+        "published_at": "2026-10-29T00:00:00+00:00",
+        "source": "Crossref",
+        "title": "Agentic, Autonomous\nDesign Evolution of Machine-Learned\nInteratomic Potentials",
+        "url": "https://doi.org/10.1021/prechem.6c00099"
+      }
+    ],
+    "date": "2026-10-29",
+    "schema_version": 1,
+    "top": [
+      "https://huggingface.co/datasets/behavior-spatial-benchmark/BEHAVIOR-Spatial",
+      "https://huggingface.co/datasets/danielrosehill/Tech-Graphics-Benchmark-Ratings",
+      "https://doi.org/10.13026/0tf4-ny14"
+    ]
+  },
   "since": "2026-10-27T17:03:16.095704+00:00"
 }
